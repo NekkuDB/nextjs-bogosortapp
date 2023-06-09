@@ -44,7 +44,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
           }).then(async (res) => {
             setLoading(false);
             if (res.status === 200) {
-              toast.success("Account created! Redirecting to login...");
+              toast.success("Cuenta creada! Redirigieno al login...");
               setTimeout(() => {
                 router.push("/login");
               }, 2000);
@@ -100,16 +100,16 @@ export default function Form({ type }: { type: "login" | "register" }) {
         {loading ? (
           <LoadingDots color="#808080" />
         ) : (
-          <p>{type === "login" ? "Sign In" : "Sign Up"}</p>
+          <p>{type === "login" ? "Inicia Sesion" : "Registrate"}</p>
         )}
       </button>
       {type === "login" ? (
         <p className="text-center text-sm text-gray-600">
-          Don&apos;t have an account?{" "}
+          ¿No tienes una cuenta?{" "}
           <Link href="/register" className="font-semibold text-gray-800">
-            Sign up
+            Registrate
           </Link>{" "}
-          for free.
+          gratis.
         </p>
       ) : (
         <p className="text-center text-sm text-gray-600">
